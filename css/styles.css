@@ -7,6 +7,7 @@
     height: 10vh;
     background-color: none;
     color: #000;
+    flex-direction: column;
 }
 
 #title{
@@ -14,17 +15,27 @@
     color: black;
 }
 
-#menu{
+input{
     float: right;
+    margin: 20px;
+    background: transparent;
+    box-sizing: border-box;
+    border: none;
+    border-bottom:1px solid gray;
+    font-size: medium;
 }
 
 /*********************************************************/
 #airBoard_zone{
-    height: 30vh;
+    display: flex;
 }
 
 #airBoard_list{
     list-style-type: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .airBoard{
@@ -32,6 +43,7 @@
     padding: 20px;
     float: left;
     height: 100px;
+    width: 12%;
     background-color: #007bff;
 }
 /*********************************************************/
