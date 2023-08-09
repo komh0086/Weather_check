@@ -7,23 +7,42 @@
   </head>
   <body id="main">
     <div id="header">
-        <h1 id="title">지역 명</h1>
+        <h1 id="title"></h1>
         <input id="search"></input>
     </div>
     <div id="airBoard_zone">
         <li id="airBoard_list">
-            <div class="airBoard">미세먼지</div>
-            <div class="airBoard">초미세먼지</div>
-            <div class="airBoard">오존</div>
-            <div class="airBoard">이산화질소</div>
-            <div class="airBoard">일산화탄소</div>
-            <div class="airBoard">아황산가스</div>
+            <div class="airBoard" id="pm10">
+                <div id="pm10Title"></div>
+                <div id="pm10Value"></div>
+            </div>
+            <div class="airBoard" id="pm25">
+                <div id="pm25Title"></div>
+                <div id="pm25Value"></div>
+            </div>
+            <div class="airBoard" id="o3">
+                <div id="o3Title"></div>
+                <div id="o3Value"></div>
+            </div>
+            <div class="airBoard" id="no2">
+                <div id="no2Title"></div>
+                <div id="no2Value"></div>
+            </div>
+            <div class="airBoard" id="co">
+                <div id="coTitle"></div>
+                <div id="coValue"></div>
+            </div>
+            <div class="airBoard" id="so2">
+                <div id="so2Title"></div>
+                <div id="so2Value"></div>
+            </div>
         </li>
     </div>
     <div id="bottom">
         bottom
     </div>
     <script src="js/script.js">
+        console.log("adf");
     </script>
     </body>
 </html>
