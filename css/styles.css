@@ -120,4 +120,16 @@ input{
 
 #bottom{
     height: 40vh;
+    grid-template-columns: 100px 100px;
+}
+
+.bottomBtn{
+    width: 40%;
+    height: 50px;
+    padding: 20px;
+    margin: 20px;
+    border: none;
+    background-color: lightgrey;
+    border-radius: 30px;
+    font-size: medium;
 }
