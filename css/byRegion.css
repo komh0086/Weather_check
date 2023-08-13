@@ -1,0 +1,172 @@
+#title{
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+}
+
+body{
+    background-image:  url(../images/background.jpg);
+}
+
+header{
+    display: flex;
+}
+
+.btn_list{
+   
+    list-style-type: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.item_btn{
+    height: 40px;
+    width: 14%;
+    text-align: center;
+    border-radius: 30px;
+    border-color: grey;
+    float: left;
+    margin: 20px;
+    background-color: white;
+    line-height: 35px;
+    color: grey;
+}
+
+#map_zone{
+    background-image:  url(../images/map.png);
+    width: 400px;
+    height: 670px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.value_perfect{
+    background-color: white;
+    border-radius: 30px;
+    border: 2px solid blue;
+    text-align: center;
+    width: 100px;
+    float:left;
+}
+
+.value_good{
+    background-color: white;
+    border-radius: 30px;
+    border: 2px solid green;
+    text-align: center;
+    width: 100px;
+    float:left;
+}
+
+.value_mid{
+    background-color: white;
+    border-radius: 30px;
+    border: 2px solid yellow;
+    text-align: center;
+    width: 100px;
+    float:left;
+}
+
+.value_bad{
+    background-color: white;
+    border-radius: 30px;
+    border: 2px solid orange;
+    text-align: center;
+    width: 100px;
+    float:left;
+}
+
+.value_worst{
+    background-color: white;
+    border-radius: 30px;
+    border: 2px solid red;
+    text-align: center;
+    width: 100px;
+    float:left;
+}
+
+#busan {
+    margin-top: -10px;
+    margin-left: 300px;
+}
+  
+#chungbuk {
+    margin-top: 100px;
+    margin-left: -50px;
+}
+  
+#chongnam {
+    margin-top: 130px;
+    margin-left: -250px;
+}
+  
+#daegu {
+    margin-top: 70px;
+    margin-left: 100px;
+}
+  
+#daejeon {
+    margin-top: 170px;
+    margin-left: -140px;
+}
+  
+#gangwon {
+    margin-top: 80px;
+    margin-left: 70px;
+}
+  
+#gwangju {
+    margin-top: 10px;
+    margin-left: -50px;
+}
+  
+#gyeongbuk {
+    margin-top: 170px;
+    margin-left: 0px;
+}
+  
+#gyeonggi {
+    margin-top: 70px;
+    margin-left: 30px;
+}
+  
+#gyeongnam {
+    margin-top: 40px;
+    margin-left: 160px;
+}
+  
+#incheon {
+    margin-top: 40px;
+    margin-left: 10px;
+}
+  
+#jeju {
+    margin-top: 150px;
+    margin-left: -80px;
+}
+  
+#jeonbuk {
+    margin-top: 70px;
+    margin-left: 30px;
+}
+  
+#jeonnam {
+    margin-top: 30px;
+    margin-left: 0px;
+}
+  
+#sejong {
+    margin-top: 130px;
+    margin-left: -140px;
+}
+  
+#seoul {
+    margin-top: 20px;
+}
+  
+#ulsan {
+    margin-top: -10px;
+    margin-left: 320px;
+}
