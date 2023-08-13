@@ -1,15 +1,17 @@
+var total_data;
 var btn_list = document.getElementsByClassName('item_btn');
 
 var list = ["PM10", "PM25", "O3", "NO2", "CO", "SO2"];
 for(var i=0;i<btn_list.length;i++){
-    btn_list[i].addEventListener('click', getWeather(list[i]));
+    btn_list[i].addEventListener('click', showData(list[i]));
 }   
 
-function getWeather(itemCode) {
-
+function showData(itemCode){
+    
     var btn_list = document.getElementsByClassName('item_btn');
     
     var list = ["PM10", "PM25", "O3", "NO2", "CO", "SO2"];
+    
     for(var i=0;i<list.length;i++){
         if(list[i] == itemCode){
             btn_list[i].style.borderColor = 'blue';
@@ -21,98 +23,38 @@ function getWeather(itemCode) {
         
     }
 
+    var regions = [
+        "busan", "chungbuk", "chungnam", "daegu", "daejeon",
+        "gangwon", "gwangju", "gyeongbuk", "gyeonggi", "gyeongnam",
+        "incheon", "jeju", "jeonbuk", "jeonnam", "sejong", "seoul", "ulsan"
+    ];
+    var regions_korean = [
+        "부산", "충북", "충남", "대구", "대전", "강원", "광주", "경북", "경기", "경남",
+        "인천", "제주", "전북", "전남", "세종", "서울", "울산"
+    ];
+    
+    for (var i = 0; i < regions.length; i++) {
+        var regionCode = regions[i];
+        var regionElement = document.getElementById(regionCode);
+        var regionData = total_data[itemCode][regionCode];
+    
+        regionElement.innerHTML = regions_korean[i] + " " + regionData;
+        regionElement.removeAttribute("class");
+        regionElement.setAttribute("class", statusLevel(regionData, itemCode));
+    }
+    
+}
+
+function getWeather(itemCode) {
+
     const apiKey = 'Ak9aORXhv2N8IxiN%2FVh%2BjKM7sDM3NVwmAwv9nTf9TJShIhimCh1dY7P%2FZqGHOdbnQSLF%2FsDUcgp3D6u0ISF%2ByQ%3D%3D';
     var date = getToday();
     fetch(`http://apis.data.go.kr/B552584/ArpltnStatsSvc/getCtprvnMesureLIst?serviceKey=${apiKey}&returnType=json&numOfRows=1&pageNo=1&itemCode=${itemCode}&dataGubun=HOUR`)
         .then(response => response.json())
         .then(data => {
             let res = data.response.body.items[0];
-            var busan = document.getElementById('busan');
-            var chungbuk = document.getElementById('chungbuk');
-            var chungnam = document.getElementById('chungnam');
-            var daegu = document.getElementById('daegu');
-            var daejeon = document.getElementById('daejeon');
-            var gangwon = document.getElementById('gangwon');
-            var gwangju = document.getElementById('gwangju');
-            var gyeongbuk = document.getElementById('gyeongbuk');
-            var gyeonggi = document.getElementById('gyeonggi');
-            var gyeongnam = document.getElementById('gyeongnam');
-            var incheon = document.getElementById('incheon');
-            var jeju = document.getElementById('jeju');
-            var jeonbuk = document.getElementById('jeonbuk');
-            var jeonnam = document.getElementById('jeonnam');
-            var sejong = document.getElementById('sejong');
-            var seoul = document.getElementById('seoul');
-            var ulsan = document.getElementById('ulsan');
-
-            busan.innerHTML = "부산 " + res['busan'];
-            busan.removeAttribute("class");
-            busan.setAttribute("class", statusLevel(res['busan'], itemCode));
-
-            chungbuk.innerHTML = "충북 " + res['chungbuk'];
-            chungbuk.removeAttribute("class");
-            chungbuk.setAttribute("class", statusLevel(res['chungbuk'], itemCode));
-
-            chungnam.innerHTML = "충남 " + res['chungnam'];
-            chungnam.removeAttribute("class");
-            chungnam.setAttribute("class", statusLevel(res['chungnam'], itemCode));
-
-            daegu.innerHTML = "대구 " + res['daegu'];
-            daegu.removeAttribute("class");
-            daegu.setAttribute("class", statusLevel(res['daegu'], itemCode));
-
-            daejeon.innerHTML = "대전 " + res['daejeon'];
-            daejeon.removeAttribute("class");
-            daejeon.setAttribute("class", statusLevel(res['daejeon'], itemCode));
-
-            gangwon.innerHTML = "강원 " + res['gangwon'];
-            gangwon.removeAttribute("class");
-            gangwon.setAttribute("class", statusLevel(res['gangwon'], itemCode));
-
-            gwangju.innerHTML = "광주 " + res['gwangju'];
-            gwangju.removeAttribute("class");
-            gwangju.setAttribute("class", statusLevel(res['gwangju'], itemCode));
-
-            gyeongbuk.innerHTML = "경북 " + res['gyeongbuk'];
-            gyeongbuk.removeAttribute("class");
-            gyeongbuk.setAttribute("class", statusLevel(res['gyeongbuk'], itemCode));
-
-            gyeonggi.innerHTML = "경기 " + res['gyeonggi'];
-            gyeonggi.removeAttribute("class");
-            gyeonggi.setAttribute("class", statusLevel(res['gyeonggi'], itemCode));
-
-            gyeongnam.innerHTML = "경남 " + res['gyeongnam'];
-            gyeongnam.removeAttribute("class");
-            gyeongnam.setAttribute("class", statusLevel(res['gyeongnam'], itemCode));
-
-            incheon.innerHTML = "인천 " + res['incheon'];
-            incheon.removeAttribute("class");
-            incheon.setAttribute("class", statusLevel(res['incheon'], itemCode));
-
-            jeju.innerHTML = "제주 " + res['jeju'];
-            jeju.removeAttribute("class");
-            jeju.setAttribute("class", statusLevel(res['jeju'], itemCode));
-
-            jeonbuk.innerHTML = "전북 " + res['jeonbuk'];
-            jeonbuk.removeAttribute("class");
-            jeonbuk.setAttribute("class", statusLevel(res['jeonbuk'], itemCode));
-
-            jeonnam.innerHTML = "전남 " + res['jeonnam'];
-            jeonnam.removeAttribute("class");
-            jeonnam.setAttribute("class", statusLevel(res['jeonnam'], itemCode));
-
-            sejong.innerHTML = "세종 " + res['sejong'];
-            sejong.removeAttribute("class");
-            sejong.setAttribute("class", statusLevel(res['sejong'], itemCode));
-
-            seoul.innerHTML = "서울 " + res['seoul'];
-            seoul.removeAttribute("class");
-            seoul.setAttribute("class", statusLevel(res['seoul'], itemCode));
-
-            ulsan.innerHTML = "울산 " + res['ulsan'];
-            ulsan.removeAttribute("class");
-            ulsan.setAttribute("class", statusLevel(res['ulsan'], itemCode));
-        })
+            total_data[itemCode] = res;
+            })
         .catch(error => {
             console.error('Error fetching weather data:', error);
         });
