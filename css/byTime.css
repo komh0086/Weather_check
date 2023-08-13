@@ -1,87 +1,33 @@
-#title{
-    text-align: center;
-    font-size: large;
-    font-weight: 700;
-}
-
 body{
     background-image:  url(../images/background.jpg);
 }
 
-header{
-    display: flex;
-}
-
-.btn_list{
-   
-    list-style-type: none;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-.item_btn{
-    height: 40px;
-    width: 14%;
-    text-align: center;
-    border-radius: 30px;
-    border-color: grey;
+.content{
     float: left;
-    margin: 20px;
-    background-color: white;
-    line-height: 35px;
-    color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #map_zone{
     background-image:  url(../images/map.png);
     width: 400px;
     height: 670px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 50px;
+    margin-top: 50px;
 }
 
-.value_perfect{
+#title{
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+}
+
+.region{
     background-color: white;
     border-radius: 30px;
     border: 2px solid blue;
-    text-align: center;
-    width: 100px;
-    float:left;
-}
-
-.value_good{
-    background-color: white;
-    border-radius: 30px;
-    border: 2px solid green;
-    text-align: center;
-    width: 100px;
-    float:left;
-}
-
-.value_mid{
-    background-color: white;
-    border-radius: 30px;
-    border: 2px solid yellow;
-    text-align: center;
-    width: 100px;
-    float:left;
-}
-
-.value_bad{
-    background-color: white;
-    border-radius: 30px;
-    border: 2px solid orange;
-    text-align: center;
-    width: 100px;
-    float:left;
-}
-
-.value_worst{
-    background-color: white;
-    border-radius: 30px;
-    border: 2px solid red;
     text-align: center;
     width: 100px;
     float:left;
