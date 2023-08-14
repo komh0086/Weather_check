@@ -2,15 +2,52 @@ body{
     background-image:  url(../images/background.jpg);
 }
 
-.content{
-    float: left;
+header{
     display: flex;
+}
+
+#inform{
+    width: 400px;
+    height: 670px;
+    line-height: 670px;
+}
+
+img {
+    width: 400px;
+    height: 500px;
+    object-fit: scale-down;
+  }
+
+.btn_list{
+   
+    list-style-type: none;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.item_btn{
+    height: 40px;
+    width: 14%;
+    text-align: center;
+    border-radius: 30px;
+    border-color: grey;
+    float: left;
+    margin: 20px;
+    background-color: white;
+    line-height: 35px;
+    color: grey;
+}
+
+.content{
+    text-align: center;
+    display: flex;
     width: 100%;
 }
 
 #map_zone{
+    display: inline-block;
     background-image:  url(../images/map.png);
     width: 400px;
     height: 670px;
@@ -18,7 +55,7 @@ body{
     margin-top: 50px;
 }
 
-#title{
+.title{
     text-align: center;
     font-size: large;
     font-weight: 700;
@@ -89,7 +126,7 @@ body{
 }
   
 #jeju {
-    margin-top: 150px;
+    margin-top: 130px;
     margin-left: -80px;
 }
   

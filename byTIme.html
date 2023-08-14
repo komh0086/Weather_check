@@ -6,36 +6,49 @@
     <link rel="stylesheet" href="css/byTime.css"/>
   </head>
   <body id="main">
-    <div id="title">시간대별 대기현황</div>
+    <div class="title">지역별 대기질 예보</div>
+    <header>
+      <div class="btn_list">
+      <button class="item_btn">초미세먼지</button>
+      <button class="item_btn">미세먼지</button>
+      <button class="item_btn">오존</button>
+      <button class="item_btn">이산화질소</button>
+      <button class="item_btn">일산화탄소</button>
+      <button class="item_btn">아황산가스</button>
+    </div>
+  </header>
     <div class="content">
     <div id="map_zone">
-      <button class="region" id="gyeonggi">경기</button>
-      <button class="region" id="gangwon">강원</button><br>
-      <button class="region" id="incheon">인천</button>
-      <button class="region" id="seoul">서울</button><br>
-      <button class="region" id="chungbuk">충북</button><br>
-      <button class="region" id="chungnam">충남</button>
-      <button class="region" id="sejong">세종</button><br>
-      <button class="region" id="daejeon">대전</button>
-      <button class="region" id="gyeongbuk">경북</button><br>
-      <button class="region" id="jeonbuk">전북</button>
-      <button class="region" id="daegu">대구</button><br>
-      <button class="region" id="gyeongnam">경남</button>
-      <button class="region" id="ulsan">울산</button><br>
-      <button class="region" id="gwangju">광주</button>
-      <button class="region" id="busan">부산</button><br>
-      <button class="region" id="jeonnam">전남</button><br>
-      <button class="region" id="jeju">제주</button>
+      <div class="region" id="gyeonggi">경기</div>
+      <div class="region" id="gangwon">강원</div><br>
+      <div class="region" id="incheon">인천</div>
+      <div class="region" id="seoul">서울</div><br>
+      <div class="region" id="chungbuk">충북</div><br>
+      <div class="region" id="chungnam">충남</div>
+      <div class="region" id="sejong">세종</div><br>
+      <div class="region" id="daejeon">대전</div>
+      <div class="region" id="gyeongbuk">경북</div><br>
+      <div class="region" id="jeonbuk">전북</div>
+      <div class="region" id="daegu">대구</div><br>
+      <div class="region" id="gyeongnam">경남</div>
+      <div class="region" id="ulsan">울산</div><br>
+      <div class="region" id="gwangju">광주</div>
+      <div class="region" id="busan">부산</div><br>
+      <div class="region" id="jeonnam">전남</div><br>
+      <div class="region" id="jeju">제주</div>
     </div>
-    <div id="value_list">
-      <table>
-        <tr>
-          <td>asdf</td>
-          <td>aasdfasdf</td>
-        </tr>
-      </table>
+    <div id="inform">
+      예보 정보<br>
+      <div id="informOverall">overall</div><br>
+      <div id="informCause">cause</div>
     </div>
     </div>
+    <div class="title">관측 이미지</div>
+    <div class="content">
+    <img src="https://www.airkorea.or.kr/file/proxyImage?fileName=2023/08/14/AQFv1_21h.20230813.KNU_09_01.O3.1hsp.2023081509.png">
+    
+  </div>
+    
     <script src="js/byTime.js">
     </script>
     </body>

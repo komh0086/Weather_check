@@ -1,26 +1,21 @@
-var total_data;
-var btn_list = document.getElementsByClassName('item_btn');
+var total_data = {
+   
+};
+let list = ['PM10', 'PM25', 'O3', 'NO2', 'CO', 'SO2'];
+let btn_list = document.getElementsByClassName('item_btn');
+init();
 
-var list = ["PM10", "PM25", "O3", "NO2", "CO", "SO2"];
-for(var i=0;i<btn_list.length;i++){
-    btn_list[i].addEventListener('click', showData(list[i]));
-}   
+function init(){
+    for(var i=0;i<list.length;i++){
+        getWeather(list[i]);
+    }
+}
 
 function showData(itemCode){
-    
-    var btn_list = document.getElementsByClassName('item_btn');
-    
-    var list = ["PM10", "PM25", "O3", "NO2", "CO", "SO2"];
-    
+    console.log(itemCode);
     for(var i=0;i<list.length;i++){
-        if(list[i] == itemCode){
-            btn_list[i].style.borderColor = 'blue';
-            btn_list[i].style.color = 'blue';
-        }else{
-            btn_list[i].style.borderColor = 'grey';
-            btn_list[i].style.color = 'grey';
-        }
-        
+        btn_list[i].style.borderColor = 'grey';
+        btn_list[i].style.color = 'grey';
     }
 
     var regions = [
@@ -54,6 +49,15 @@ function getWeather(itemCode) {
         .then(data => {
             let res = data.response.body.items[0];
             total_data[itemCode] = res;
+            for(var i=0;i<list.length;i++){
+                if(list[i] == itemCode){
+                    btn_list[i].addEventListener('click', (e) =>{
+                        showData(itemCode);
+                        e.target.style.color = 'blue';
+                        e.target.style.borderColor = 'blue';
+                    });
+                }
+            }
             })
         .catch(error => {
             console.error('Error fetching weather data:', error);
