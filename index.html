@@ -3,45 +3,82 @@
   <head>
     <meta charset="utf-8">
     <title>Weather Check</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css"/>
   </head>
   <body id="main">
-    <div id="header">
-        <h1 id="title"></h1>
-        <input id="search"></input>
+    <header class="p-3 mb-3 border-bottom">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+            </a>
+    
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="index.html" class="nav-link px-2 link-body-emphasis">Home</a></li>
+              <li><a href="byTIme.html" class="nav-link px-2 link-body-emphasis">지역별 대기질 예보</a></li>
+              <li><a href="byRegion.html" class="nav-link px-2 link-body-emphasis">시도별 공기 오염도</a></li>
+            </ul>
+    
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <input type="search" class="form-control" placeholder="원하는 지역 검색(강남구)" aria-label="Search" id="search">
+            </form>
+    
+          </div>
+        </div>
+      </header>
+    <div class="container">
+        <div class="row">
+            <p class="display-3" id="title"></p>
+        </div>
+        <div class="row mb-3 text-center">
+            <div class="col border rounded mx-2 py-3">
+                <div class="card-body" id="pm10">
+                    <p class="card-text" id="pm10Value">10</p>
+                    <p class="card-text" id="pm10Title">미세먼지</p>
+                </div>
+            </div>
+            <div class="col border rounded mx-2 py-3">
+                <div class="card-body" id="pm25">
+                    <p class="card-text" id="pm25Value">asdf</p>
+                    <p class="card-text" id="pm25Title">asdf</p>
+                </div>
+            </div>
+            <div class="col border rounded mx-2 py-3">
+                <div class="card-body" id="o3">
+                    <p class="card-text" id="o3Value">asdf</p>
+                    <p class="card-text" id="o3Title">asdf</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3 text-center">
+            <div class="col border rounded mx-2 py-3">
+                <div class="card-body" id="no2">
+                    <p class="card-text" id="no2Value">10ppn</p>
+                    <p class="card-text" id="no2Title">미세먼지</p>
+                </div>
+            </div>
+            <div class="col border rounded mx-2 py-3">
+                <div class="card-body" id="co">
+                    <p class="card-text" id="coValue">asdf</p>
+                    <p class="card-text" id="coTitle">asdf</p>
+                </div>
+            </div>
+            <div class="col border rounded mx-2 py-3">
+                <div class="card-body" id="so2">
+                    <p class="card-text" id="so2Value">asdf</p>
+                    <p class="card-text" id="so2Title">asdf</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="airBoard_zone">
-        <li id="airBoard_list">
-            <div class="airBoard" id="pm10">
-                <div id="pm10Title"></div>
-                <div id="pm10Value"></div>
-            </div>
-            <div class="airBoard" id="pm25">
-                <div id="pm25Title"></div>
-                <div id="pm25Value"></div>
-            </div>
-            <div class="airBoard" id="o3">
-                <div id="o3Title"></div>
-                <div id="o3Value"></div>
-            </div>
-            <div class="airBoard" id="no2">
-                <div id="no2Title"></div>
-                <div id="no2Value"></div>
-            </div>
-            <div class="airBoard" id="co">
-                <div id="coTitle"></div>
-                <div id="coValue"></div>
-            </div>
-            <div class="airBoard" id="so2">
-                <div id="so2Title"></div>
-                <div id="so2Value"></div>
-            </div>
-        </li>
-    </div>
-    <div id="bottom">
-        <button class="bottomBtn" onclick="location.href='byTime.html'">지역별 대기질 예보</button>
-        <button class="bottomBtn" onclick="location.href='byRegion.html'">시도별 공기 오염도 확인하기</button>
-    </div>
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="byTIme.html" class="nav-link px-2 text-body-secondary">지역별 대기질 예보</a></li>
+          <li class="nav-item"><a href="byRegion.html" class="nav-link px-2 text-body-secondary">시도별 공기 오염도</a></li>
+        </ul>
+      </footer>
     <script src="js/script.js">
     </script>
     </body>

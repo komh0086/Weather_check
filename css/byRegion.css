@@ -4,10 +4,6 @@
     font-weight: 700;
 }
 
-body{
-    background-image:  url(../images/background.jpg);
-}
-
 header{
     display: flex;
 }
@@ -143,7 +139,7 @@ header{
 }
   
 #jeju {
-    margin-top: 150px;
+    margin-top: 100px;
     margin-left: -80px;
 }
   

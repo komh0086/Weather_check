@@ -8,7 +8,7 @@ let total_data = {
 let list = ['PM10', 'PM25', 'O3', 'NO2', 'CO', 'SO2'];
 let btn_list = document.getElementsByClassName('item_btn');
 
-init();
+// init();
 function init(){
     for(var i=0;i<list.length;i++){
         // getWeather(list[i]);
