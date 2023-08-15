@@ -20,7 +20,7 @@
               <li><a href="byRegion.html" class="nav-link px-2 link-body-emphasis">시도별 공기 오염도</a></li>
             </ul>
     
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search" onsubmit="return false">
               <input type="search" class="form-control" placeholder="원하는 지역 검색(강남구)" aria-label="Search" id="search">
             </form>
     
@@ -34,40 +34,40 @@
         <div class="row mb-3 text-center">
             <div class="col border rounded mx-2 py-3">
                 <div class="card-body" id="pm10">
-                    <p class="card-text" id="pm10Value">10</p>
+                    <p class="card-text" id="pm10Value">㎍/㎥</p>
                     <p class="card-text" id="pm10Title">미세먼지</p>
                 </div>
             </div>
             <div class="col border rounded mx-2 py-3">
                 <div class="card-body" id="pm25">
-                    <p class="card-text" id="pm25Value">asdf</p>
-                    <p class="card-text" id="pm25Title">asdf</p>
+                    <p class="card-text" id="pm25Value">㎍/㎥</p>
+                    <p class="card-text" id="pm25Title">초미세먼지</p>
                 </div>
             </div>
             <div class="col border rounded mx-2 py-3">
                 <div class="card-body" id="o3">
-                    <p class="card-text" id="o3Value">asdf</p>
-                    <p class="card-text" id="o3Title">asdf</p>
+                    <p class="card-text" id="o3Value">ppm</p>
+                    <p class="card-text" id="o3Title">오존</p>
                 </div>
             </div>
         </div>
         <div class="row mb-3 text-center">
             <div class="col border rounded mx-2 py-3">
                 <div class="card-body" id="no2">
-                    <p class="card-text" id="no2Value">10ppn</p>
-                    <p class="card-text" id="no2Title">미세먼지</p>
+                    <p class="card-text" id="no2Value">ppm</p>
+                    <p class="card-text" id="no2Title">이산화질소</p>
                 </div>
             </div>
             <div class="col border rounded mx-2 py-3">
                 <div class="card-body" id="co">
-                    <p class="card-text" id="coValue">asdf</p>
-                    <p class="card-text" id="coTitle">asdf</p>
+                    <p class="card-text" id="coValue">ppm</p>
+                    <p class="card-text" id="coTitle">일산화탄소</p>
                 </div>
             </div>
             <div class="col border rounded mx-2 py-3">
                 <div class="card-body" id="so2">
-                    <p class="card-text" id="so2Value">asdf</p>
-                    <p class="card-text" id="so2Title">asdf</p>
+                    <p class="card-text" id="so2Value">ppm</p>
+                    <p class="card-text" id="so2Title">아황산가스</p>
                 </div>
             </div>
         </div>

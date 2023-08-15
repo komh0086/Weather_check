@@ -3,24 +3,31 @@ header{
 }
 
 #inform{
-    width: 400px;
-    height: 670px;
-    line-height: 670px;
+    width: 100%;
+    height: 50x;
+    text-align: center;
 }
 
-img {
+
+#image {
+    text-align: center;
     width: 400px;
     height: 500px;
     object-fit: scale-down;
-  }
+}
 
 .btn_list{
-   
     list-style-type: none;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     width: 100%;
+}
+
+#map_zone{
+    background-image:  url(../images/map.png);
+    width: 400px;
+    height: 670px;
 }
 
 .item_btn{
@@ -36,20 +43,6 @@ img {
     color: grey;
 }
 
-.content{
-    text-align: center;
-    display: flex;
-    width: 100%;
-}
-
-#map_zone{
-    display: inline-block;
-    background-image:  url(../images/map.png);
-    width: 400px;
-    height: 670px;
-    margin-left: 50px;
-    margin-top: 50px;
-}
 
 .title{
     text-align: center;
@@ -122,7 +115,7 @@ img {
 }
   
 #jeju {
-    margin-top: 130px;
+    margin-top: 90px;
     margin-left: -80px;
 }
   

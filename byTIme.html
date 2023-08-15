@@ -33,7 +33,10 @@
       <button class="item_btn">아황산가스</button>
     </div>
   </header>
-    <div class="content">
+  <div id="inform">
+    <h3>대기질 예보</h3>
+  </div>
+    <div class="image-cover">
     <div id="map_zone">
       <div class="region" id="gyeonggi">경기</div>
       <div class="region" id="gangwon">강원</div><br>
@@ -53,17 +56,19 @@
       <div class="region" id="jeonnam">전남</div><br>
       <div class="region" id="jeju">제주</div>
     </div>
-    <div id="inform">
-      예보 정보<br>
-      <div id="informOverall">overall</div><br>
-      <div id="informCause">cause</div>
+    <div>
+    <img src="https://www.airkorea.or.kr/file/proxyImage?fileName=2023/08/14/AQFv1_21h.20230813.KNU_09_01.O3.1hsp.2023081509.png" id="image" class="img-thumbnail">
     </div>
-    </div>
-    <div class="title">관측 이미지</div>
-    <div class="content">
-    <img src="https://www.airkorea.or.kr/file/proxyImage?fileName=2023/08/14/AQFv1_21h.20230813.KNU_09_01.O3.1hsp.2023081509.png">
-    
   </div>
+  <div id="Overall">overall</div>
+  <div id="Cause">cause</div>
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="byTIme.html" class="nav-link px-2 text-body-secondary">지역별 대기질 예보</a></li>
+      <li class="nav-item"><a href="byRegion.html" class="nav-link px-2 text-body-secondary">시도별 공기 오염도</a></li>
+    </ul>
+  </footer>
     
     <script src="js/byTime.js">
     </script>
