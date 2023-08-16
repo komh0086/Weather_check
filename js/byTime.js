@@ -86,7 +86,7 @@ function showData(itemCode){
 function getWeather(itemCode) {
     const apiKey = 'Ak9aORXhv2N8IxiN%2FVh%2BjKM7sDM3NVwmAwv9nTf9TJShIhimCh1dY7P%2FZqGHOdbnQSLF%2FsDUcgp3D6u0ISF%2ByQ%3D%3D';
     var date = getToday();
-    var url = `http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustFrcstDspth?serviceKey=${apiKey}&returnType=json&numOfRows=1&pageNo=1&searchDate=${date}&informCode=${itemCode}&ver=1.1`;
+    var url = `https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustFrcstDspth?serviceKey=${apiKey}&returnType=json&numOfRows=1&pageNo=1&searchDate=${date}&informCode=${itemCode}&ver=1.1`;
     
     fetch(url)
         .then(response => response.json())
