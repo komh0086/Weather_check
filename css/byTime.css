@@ -8,12 +8,17 @@ header{
     text-align: center;
 }
 
+.image_cover{
+    text-align: center;
+    flex-wrap: row;
+}
 
 #image {
     text-align: center;
     width: 400px;
     height: 500px;
     object-fit: scale-down;
+    margin-left: 50px;
 }
 
 .btn_list{
@@ -24,10 +29,15 @@ header{
     width: 100%;
 }
 
+.overall{
+    text-align: center;
+}
+
 #map_zone{
     background-image:  url(../images/map.png);
     width: 400px;
     height: 670px;
+    margin-left: 25%;
 }
 
 .item_btn{
@@ -83,8 +93,8 @@ header{
     margin-top: 170px;
     margin-left: -140px;
 }
-  
-#gangwon {
+
+#youngdong {
     margin-top: 80px;
     margin-left: 70px;
 }
@@ -99,7 +109,7 @@ header{
     margin-left: 0px;
 }
   
-#gyeonggi {
+#gyeonggibukbu {
     margin-top: 70px;
     margin-left: 30px;
 }
